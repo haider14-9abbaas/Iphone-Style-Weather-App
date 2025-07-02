@@ -37,4 +37,4 @@ MIT License
 
 1. **Clone the repo:**
    ```bash
-   git clone https://github.com/haider14-9abbaas/iphone-weather-app.git
+   git clone https://github.com/haider14-9abbaas/Iphone-Style-Weather-App.git
