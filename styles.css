@@ -1,0 +1,319 @@
+:root {
+  --main-bg: linear-gradient(135deg, #b1c3e7 0%, #f2eafb 100%);
+  --glass-bg: rgba(255, 255, 255, 0.32);
+  --glass-bg-2: rgba(255,255,255,0.48);
+  --shadow: 0 8px 48px #a4b6ea34, 0 1.5px 8px #0001;
+  --primary: #253b57;
+  --accent: #6c3fd3;
+  --footer-bg: #55337a;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--main-bg);
+  font-family: 'Inter', 'Montserrat', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* push footer to the bottom if content is short */
+}
+
+.iphone-weather-app {
+  flex: 1 0 auto;
+  max-width: 390px;
+  width: 98vw;
+  margin: 38px auto 0 auto;
+  background: var(--glass-bg);
+  border-radius: 28px 28px 24px 24px;
+  box-shadow: var(--shadow);
+  padding: 0 18px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 625px;
+  position: relative;
+  overflow: visible;
+}
+
+.search-bar {
+  margin: 32px auto 12px auto;
+  display: flex;
+  width: 90%;
+  background: var(--glass-bg-2);
+  border-radius: 18px;
+  box-shadow: 0 1.5px 6px #fff1;
+}
+#cityInput {
+  flex: 1;
+  padding: 11px 18px;
+  font-size: 1.07rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 500;
+  border-radius: 18px 0 0 18px;
+}
+.search-bar button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 0 18px 18px 0;
+  padding: 0 17px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background .18s;
+  display: flex;
+  align-items: center;
+}
+.search-bar button:hover {
+  background: #45218e;
+}
+
+.city-samples {
+  font-size: 0.98em;
+  color: #5764a4;
+  padding: 0 0 6px 20px;
+  margin-bottom: 4px;
+  letter-spacing: 0.01em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.city-samples span {
+  background: #e3dbfc;
+  color: #452e92;
+  border-radius: 11px;
+  padding: 2.5px 10px;
+  font-size: 0.95em;
+  cursor: pointer;
+  transition: background .13s, color .13s;
+  display: inline-block;
+  margin-bottom: 3px;
+}
+.city-samples span:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.weather-main {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  min-height: 320px;
+  margin: 0;
+  padding: 0;
+}
+
+.weather-placeholder {
+  text-align: center;
+  color: #b1b5d4;
+  font-size: 1.15rem;
+  padding-top: 100px;
+}
+.weather-placeholder i {
+  font-size: 3.1rem;
+  margin-bottom: 14px;
+}
+
+.weather-card {
+  background: var(--glass-bg-2);
+  border-radius: 22px;
+  box-shadow: 0 2px 18px #8bb2db18;
+  width: 100%;
+  margin: 0;
+  padding: 30px 0 18px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn .6s;
+  backdrop-filter: blur(8px);
+  box-sizing: border-box;
+}
+
+@keyframes fadeIn { from{ opacity: 0;} to{ opacity: 1;} }
+
+.weather-city {
+  font-size: 1.25rem;
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 3px;
+  text-align: center;
+  letter-spacing: .01em;
+}
+.weather-temp {
+  font-size: 3.7rem;
+  font-weight: 700;
+  color: #18113c;
+  margin-bottom: 7px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  line-height: 1;
+}
+.weather-emoji {
+  font-size: 2.3rem;
+  margin-top: 8px;
+}
+.weather-desc {
+  font-size: 1.11rem;
+  color: #31478c;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+.weather-hi-low {
+  color: #7a7cae;
+  font-size: .99rem;
+  margin-bottom: 13px;
+  font-weight: 500;
+}
+.weather-cloud {
+  color: #8e91bb;
+  font-size: .97rem;
+  margin-bottom: 9px;
+}
+.weather-extra {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  color: #4a5b87;
+  font-size: .97rem;
+  margin-bottom: 7px;
+  gap: 4px;
+}
+.weather-extra div {
+  text-align: center;
+}
+.weather-extra span {
+  display: block;
+  font-size: 1.13rem;
+  color: #3d3264;
+  font-weight: 600;
+}
+.weather-forecast {
+  width: 100%;
+  margin-top: 12px;
+  padding: 0 0px;
+}
+.weather-forecast-title {
+  font-size: 1.01rem;
+  color: #45385a;
+  margin-bottom: 1px;
+  margin-top: 10px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-align: left;
+  padding-left: 8px;
+}
+.weather-forecast-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 2px;
+  margin-bottom: 4px;
+  width: 100%;
+}
+.weather-forecast-item {
+  flex: 1 1 0;
+  text-align: center;
+  font-size: 0.96rem;
+  color: #3b4572;
+  background: rgba(255,255,255,0.21);
+  border-radius: 11px;
+  min-width: 43px;
+  margin: 0 2px;
+  padding: 3px 2px 5px 2px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.weather-forecast-item .wi {
+  font-size: 1.22em;
+  display: block;
+  margin-bottom: 1px;
+  color: #313e65;
+}
+
+/* Footer */
+.footer {
+  width: 100vw;
+  background: var(--footer-bg);
+  color: #fff;
+  margin-top: auto;
+  padding: 17px 0 10px 0;
+  border-radius: 0 0 19px 19px;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* NO position: fixed, absolute, or z-index */
+}
+
+.footer-content {
+  width: 96vw;
+  max-width: 390px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-text {
+  font-size: 1rem;
+  margin-bottom: 6px;
+  text-align: center;
+}
+.footer-icons {
+  display: flex;
+  gap: 32px;
+  font-size: 2rem;
+  margin-top: 7px;
+}
+.footer-icons a svg {
+  display: block;
+  transition: transform 0.15s, filter 0.15s;
+}
+.footer-icons a:hover svg {
+  transform: scale(1.12);
+  filter: drop-shadow(0 2px 6px #ffe463cc);
+}
+
+@media (max-width: 600px) {
+  .iphone-weather-app {
+    min-height: unset;
+    margin: 5vw auto 0 auto;
+    padding: 0 2vw 12vw 2vw;
+    border-radius: 20px 20px 16px 16px;
+  }
+  .footer-content { max-width: 99vw;}
+  .footer {
+    border-radius: 0;
+    padding: 13px 0 9px 0;
+    font-size: 0.93rem;
+  }
+  .weather-temp { font-size: 2.6rem;}
+  .weather-card { padding: 17px 0 12px 0;}
+}
+
+@media (max-width: 400px) {
+  .footer-content, .iphone-weather-app { max-width: 100vw; }
+  .weather-card { padding: 12px 0 8px 0;}
+  .weather-main { min-height: 180px;}
+  .search-bar { width: 99%; }
+}

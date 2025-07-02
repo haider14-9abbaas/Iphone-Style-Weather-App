@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>iPhone Weather App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Animate.css for smooth effects -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- Weather Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css"/>
+  <!-- Google Fonts for iOS look -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="app-wrapper">
+    <main class="iphone-weather-app">
+      <form id="searchForm" class="search-bar">
+        <input type="text" id="cityInput" placeholder="Search city..." autocomplete="off"/>
+        <button type="submit" title="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7" stroke="#fff" stroke-width="2"/>
+            <path d="M20 20L16.65 16.65" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </form>
+      <div class="city-samples">
+        Try: <span>Karachi</span> <span>London</span> <span>Lahore</span> <span>New York</span> <span>Dubai</span> <span>Tokyo</span>
+      </div>
+      <div class="weather-main" id="weatherMain">
+        <div class="weather-placeholder">
+          <i class="wi wi-day-cloudy"></i>
+          <div>Search for any city...</div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+  <div class="footer-content">
+    <div class="footer-text">
+      Developed by <strong>Syed Haider Abbas</strong> &copy; 2025
+    </div>
+    <div class="footer-icons">
+      <a href="https://github.com/haider14-9abbaas" target="_blank" title="GitHub" aria-label="GitHub">
+        <!-- GitHub SVG -->
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+          <path fill="#fff" d="M12 2C6.477 2 2 6.484 2 12.021c0 4.43 2.865 8.188 6.839 9.504.5.09.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.461-1.11-1.461-.908-.621.069-.609.069-.609 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.089 2.91.833.091-.647.35-1.089.636-1.341-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.254-.446-1.276.098-2.659 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.506.338c1.909-1.295 2.748-1.025 2.748-1.025.546 1.383.202 2.405.1 2.659.64.7 1.028 1.595 1.028 2.688 0 3.848-2.337 4.695-4.565 4.944.359.309.678.92.678 1.855 0 1.338-.012 2.42-.012 2.75 0 .268.18.577.688.479C19.138 20.205 22 16.447 22 12.021 22 6.484 17.523 2 12 2z"/>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/syed-haider-abbas-zaidi-132525215/" target="_blank" title="LinkedIn" aria-label="LinkedIn">
+        <!-- LinkedIn SVG -->
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+          <rect x="2" y="2" width="20" height="20" rx="5" fill="#fff" fill-opacity="0"/>
+          <path fill="#fff" d="M7.94 17H5.76V9.99h2.18V17zM6.85 9.13c-.7 0-1.16-.47-1.16-1.07 0-.6.46-1.07 1.17-1.07.71 0 1.16.47 1.17 1.07 0 .6-.46 1.07-1.18 1.07zm6.15 7.87h-2.17v-3.63c0-.91-.32-1.53-1.13-1.53-.62 0-.98.42-1.14.83-.06.14-.08.33-.08.52v3.81H6.31s.03-6.18 0-6.82h2.18v.97c.29-.45.8-1.1 1.95-1.1 1.42 0 2.48.93 2.48 2.92V17z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
